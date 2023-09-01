@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SuperCarteInfiniMVC.Data;
 
@@ -11,9 +12,10 @@ using SuperCarteInfiniMVC.Data;
 namespace SuperCarteInfiniMVC.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230901145943_newDbSeed")]
+    partial class newDbSeed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,14 +54,14 @@ namespace SuperCarteInfiniMVC.Data.Migrations
                         new
                         {
                             Id = "11111111-1111-1111-1111-111111111113",
-                            ConcurrencyStamp = "a6089375-a542-40ed-81b4-9df2a708a40a",
+                            ConcurrencyStamp = "d0e27c28-d733-41a9-96cb-d58615275b7f",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "2",
-                            ConcurrencyStamp = "4b6f3443-a165-4af1-8678-04013ac60719",
+                            ConcurrencyStamp = "ad2024b3-1e06-4d62-ae56-c97112581265",
                             Name = "Player",
                             NormalizedName = "PLAYER"
                         });
@@ -159,15 +161,15 @@ namespace SuperCarteInfiniMVC.Data.Migrations
                         {
                             Id = "11111111-1111-1111-1111-111111111111",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "612d05b7-fca4-4031-9f2d-df8f3c414888",
+                            ConcurrencyStamp = "32d53aeb-f7e8-4282-a8a1-ef3c064f0620",
                             Email = "admin@admin.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ADMIN.COM",
                             NormalizedUserName = "ADMIN@ADMIN.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEEYJ4Tp73LyHe7gmd8F1d4RgT6VSxt0qf6L7MBAdSWhHuPkl8kO99qG8OEJkcpRgNw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHeQfYNkEEJGoPh5G+Di9uSQYBPZyzvwVbzYnkONMoMUf15yuByFHWkfN5ShnS1j6Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "94fda033-3a49-4e17-87bc-5e9e96accded",
+                            SecurityStamp = "6e5f1f71-366a-470a-b622-5f200bf5892c",
                             TwoFactorEnabled = false,
                             UserName = "admin@admin.com"
                         },
@@ -175,15 +177,15 @@ namespace SuperCarteInfiniMVC.Data.Migrations
                         {
                             Id = "11111111-1111-1111-1111-111111111112",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "cbf7157d-cdd9-4ac3-a5cb-72cbbca74d2c",
+                            ConcurrencyStamp = "d8416a2c-bcf9-42b5-98ed-bff9c1be4758",
                             Email = "player@player.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "PLAYER@PLAYER.COM",
                             NormalizedUserName = "PLAYER@PLAYER.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEAADpSCwfMwzRrnobllY0biint10UqPUiO59K0kpMCB+EZ/rYgVVo4hLZRe7+ywkqg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENW/4gODnv9B+gJdjcZHhTgryi/bYG3zNEBSE+PA1RzMNHTWvJuPIn6+Xt1tK6yyHw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "418fd52f-9fa2-49cd-bd3a-056a8e09ef51",
+                            SecurityStamp = "a76950a3-517e-4632-8351-e1f4a61cf25f",
                             TwoFactorEnabled = false,
                             UserName = "player@player.com"
                         });

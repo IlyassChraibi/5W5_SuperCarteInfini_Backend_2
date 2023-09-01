@@ -17,6 +17,8 @@ namespace SuperCarteInfiniMVC.Models
 		[JsonIgnore]
 		public virtual IdentityUser? IdentityUser { get; set; }
 		// TODO: Ajouter les cartes du joueur
+
+		public List<Card> Cards { get; set; }
 	}
 }
 
