@@ -256,3 +256,4 @@ C:\Users\1925619\Desktop\5W5_SuperCarteInfini_Backend_2\bin\Debug\net6.0\runtime
 C:\Users\1925619\Desktop\5W5_SuperCarteInfini_Backend_2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\1925619\Desktop\5W5_SuperCarteInfini_Backend_2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\1925619\Desktop\5W5_SuperCarteInfini_Backend_2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\1925619\Desktop\5W5_SuperCarteInfini_Backend_2\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
