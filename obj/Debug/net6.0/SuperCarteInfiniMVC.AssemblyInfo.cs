@@ -11,7 +11,6 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-SuperCarteInfiniMVC-fff16fa1-4575-4af7-a127-8eb95c8cc818")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("SuperCarteInfiniMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
