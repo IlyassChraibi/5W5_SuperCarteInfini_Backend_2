@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xTEowFYHpUhVcRA0oppYs0zD1OCHXZObgoh0CC2EfblushpWjW+J8YAI02hW21fSFYLulfRGj3w3v04m6sZthA==",
+  "dgSpecHash": "/Lh9K7es8kpr3uP5gG6tEeeypU+o1l/DwbiJln+ok4lQV2Lu1vy6qLo4QpV8OFP3w1XPlqfz0vu1Q9hWgdq+gA==",
   "success": true,
   "projectFilePath": "C:\\Users\\2157338\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj",
   "expectedPackageFiles": [
@@ -228,7 +228,11 @@
     "C:\\Users\\2157338\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\2157338\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\2157338\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\2157338\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\2157338\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\2157338\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.21\\microsoft.windowsdesktop.app.ref.6.0.21.nupkg.sha512",
+    "C:\\Users\\2157338\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.21\\microsoft.netcore.app.ref.6.0.21.nupkg.sha512",
+    "C:\\Users\\2157338\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.21\\microsoft.aspnetcore.app.ref.6.0.21.nupkg.sha512",
+    "C:\\Users\\2157338\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.21\\microsoft.netcore.app.host.win-x64.6.0.21.nupkg.sha512"
   ],
   "logs": []
 }

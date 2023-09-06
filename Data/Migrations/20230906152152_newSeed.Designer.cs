@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SuperCarteInfiniMVC.Data;
 
@@ -11,9 +12,10 @@ using SuperCarteInfiniMVC.Data;
 namespace SuperCarteInfiniMVC.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230906152152_newSeed")]
+    partial class newSeed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,7 +54,7 @@ namespace SuperCarteInfiniMVC.Data.Migrations
                         new
                         {
                             Id = "11111111-1111-1111-1111-111111111113",
-                            ConcurrencyStamp = "81ccc4af-1210-418c-b9fa-9b421e9ef957",
+                            ConcurrencyStamp = "73a10dcf-2b01-43c0-a240-7cd98474d444",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -152,15 +154,15 @@ namespace SuperCarteInfiniMVC.Data.Migrations
                         {
                             Id = "11111111-1111-1111-1111-111111111111",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "480452df-53c4-4af4-99ff-393cc1826c61",
+                            ConcurrencyStamp = "b9df5dd9-58a2-4356-9b5a-b88d159c65b2",
                             Email = "admin@admin.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ADMIN.COM",
                             NormalizedUserName = "ADMIN@ADMIN.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGiLUfF1vfpkBHuLoBdK/EROu8ByeQFJS+W/gNViIXdS1O0W/x/chOO5JQ3UxsU1gg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGhJ64O80w8Dn6t6DnI49ICTDIhe6pfSTTuW/EB8MQvRzwmPfKTxLCTdBcG3OxwmcQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1a432e91-2a67-4511-83d4-a96ddb41bd90",
+                            SecurityStamp = "935e1590-c7fb-4b7a-830c-b91675c99993",
                             TwoFactorEnabled = false,
                             UserName = "admin@admin.com"
                         },
@@ -168,15 +170,15 @@ namespace SuperCarteInfiniMVC.Data.Migrations
                         {
                             Id = "11111111-1111-1111-1111-111111111112",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "da8858a6-5340-4fe3-b5c6-7792f13fce05",
+                            ConcurrencyStamp = "bb8d1136-5c8e-490d-86ec-87daaf12cf9b",
                             Email = "player@player.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "PLAYER@PLAYER.COM",
                             NormalizedUserName = "PLAYER@PLAYER.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKPTSqShmHbL6sYLhvJD/w9o5ApdqRw5aJfOdYjaCbTQ2w4vDyHf7e7vfAKqRbsA7g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMN4fcyWjbL2xjIUqi16MOL4Gemjghbjg1tfDYBOdWS8HMwAv9DIA2YhQXOhZxjSNA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4bca0e1e-ad9d-43b6-bb3d-d32da483d02b",
+                            SecurityStamp = "8f3189af-1311-4e7c-bfc9-53724eadb441",
                             TwoFactorEnabled = false,
                             UserName = "player@player.com"
                         });
@@ -296,7 +298,12 @@ namespace SuperCarteInfiniMVC.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("PlayerId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("PlayerId");
 
                     b.ToTable("Cards");
 
@@ -327,29 +334,6 @@ namespace SuperCarteInfiniMVC.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("SuperCarteInfiniMVC.Models.OwnedCard", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("CardId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PlayerId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CardId");
-
-                    b.HasIndex("PlayerId");
-
-                    b.ToTable("OwnedCard");
-                });
-
             modelBuilder.Entity("SuperCarteInfiniMVC.Models.Player", b =>
                 {
                     b.Property<int>("Id")
@@ -374,15 +358,6 @@ namespace SuperCarteInfiniMVC.Data.Migrations
                     b.HasIndex("IdentityUserId");
 
                     b.ToTable("Players");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            IdentityUserId = "11111111-1111-1111-1111-111111111112",
-                            Money = 100,
-                            Name = "Tester"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -436,23 +411,11 @@ namespace SuperCarteInfiniMVC.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("SuperCarteInfiniMVC.Models.OwnedCard", b =>
+            modelBuilder.Entity("SuperCarteInfiniMVC.Models.Card", b =>
                 {
-                    b.HasOne("SuperCarteInfiniMVC.Models.Card", "Card")
-                        .WithMany()
-                        .HasForeignKey("CardId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SuperCarteInfiniMVC.Models.Player", "Player")
-                        .WithMany("OwnedCards")
-                        .HasForeignKey("PlayerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Card");
-
-                    b.Navigation("Player");
+                    b.HasOne("SuperCarteInfiniMVC.Models.Player", null)
+                        .WithMany("Cards")
+                        .HasForeignKey("PlayerId");
                 });
 
             modelBuilder.Entity("SuperCarteInfiniMVC.Models.Player", b =>
@@ -468,7 +431,7 @@ namespace SuperCarteInfiniMVC.Data.Migrations
 
             modelBuilder.Entity("SuperCarteInfiniMVC.Models.Player", b =>
                 {
-                    b.Navigation("OwnedCards");
+                    b.Navigation("Cards");
                 });
 #pragma warning restore 612, 618
         }

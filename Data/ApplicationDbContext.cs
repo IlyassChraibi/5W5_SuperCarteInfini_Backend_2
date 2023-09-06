@@ -41,9 +41,9 @@ namespace SuperCarteInfiniMVC.Data
                 new IdentityUserRole<string> { UserId = admin.Id, RoleId = "11111111-1111-1111-1111-111111111113" }
             );
 
-            builder.Entity<IdentityRole>().HasData(
+            /*builder.Entity<IdentityRole>().HasData(
                new IdentityRole { Id = "2", Name = "Player", NormalizedName = "PLAYER" }
-           );
+           );*/
 
             // Creation des users
             PasswordHasher<IdentityUser> hasher2 = new PasswordHasher<IdentityUser>();
@@ -61,9 +61,9 @@ namespace SuperCarteInfiniMVC.Data
             player.PasswordHash = hasher2.HashPassword(player, "Passw0rd!");
             builder.Entity<IdentityUser>().HasData(player);
 
-            builder.Entity<IdentityUserRole<string>>().HasData(
+            /*builder.Entity<IdentityUserRole<string>>().HasData(
                 new IdentityUserRole<string> { UserId = player.Id, RoleId = "2" }
-            );
+            );*/
 
 
             Card card1 = new Card
@@ -106,24 +106,34 @@ namespace SuperCarteInfiniMVC.Data
 
 
 
-            //Player playerTest = new Player
-            //{
-            //    Id = 1,
-            //    Name = "Tester",
-            //    Money = 100,
-            //    IdentityUser = player,
-            //    Cards = { card1, card2, card3 }
+            Player playerTest = new Player
+            {
+                Id = 1,
+                Name = "Tester",
+                Money = 100,
+                IdentityUserId = player.Id,
+                //IdentityUser = player,
 
+            };
+
+            builder.Entity<Player>().HasData(playerTest);
+
+
+            //ASK TEACHER SAYS "The seed entity for entity type 'OwnedCard'
+            //cannot be added because no value was provided for the required property 'CardId'."
+            //OwnedCards = new List<OwnedCard>() {
+            //    new OwnedCard() { Id = 1 ,Card = card1, Player = playerTest },
+            //    new OwnedCard() { Id = 2, Card = card2, Player = playerTest },
+            //    new OwnedCard() { Id = 3 , Card = card3, Player = playerTest }
             //};
 
-            //builder.Entity<Player>().HasData(playerTest);
-
-
+            //builder.Entity<OwnedCard>().HasData(OwnedCards);
 
 
         }
 
-
-        public DbSet<SuperCarteInfiniMVC.Models.Card>? Card { get; set; }
+        public DbSet<Card> Cards { get; set; }
+        public DbSet<Player> Players { get; set; }
+        public List<OwnedCard> OwnedCards { get; private set; }
     }
 }

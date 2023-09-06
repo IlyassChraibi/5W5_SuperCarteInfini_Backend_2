@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SuperCarteInfiniMVC.Data;
 
@@ -11,9 +12,10 @@ using SuperCarteInfiniMVC.Data;
 namespace SuperCarteInfiniMVC.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230906153305_newSeed3")]
+    partial class newSeed3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,7 +54,7 @@ namespace SuperCarteInfiniMVC.Data.Migrations
                         new
                         {
                             Id = "11111111-1111-1111-1111-111111111113",
-                            ConcurrencyStamp = "81ccc4af-1210-418c-b9fa-9b421e9ef957",
+                            ConcurrencyStamp = "3937e2db-27b8-434e-a1e6-a683e7a04518",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -152,15 +154,15 @@ namespace SuperCarteInfiniMVC.Data.Migrations
                         {
                             Id = "11111111-1111-1111-1111-111111111111",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "480452df-53c4-4af4-99ff-393cc1826c61",
+                            ConcurrencyStamp = "0f0466e5-8ceb-4b26-a0c0-69f3b71e2a16",
                             Email = "admin@admin.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ADMIN.COM",
                             NormalizedUserName = "ADMIN@ADMIN.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGiLUfF1vfpkBHuLoBdK/EROu8ByeQFJS+W/gNViIXdS1O0W/x/chOO5JQ3UxsU1gg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEG4wXfZ9DWlGETf4cQbn3kgI1QGptOGsll08j8ifSZZ9JhrGB0fYxAn+zlJfK3J+1w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1a432e91-2a67-4511-83d4-a96ddb41bd90",
+                            SecurityStamp = "21b278d3-3f44-41e2-8c9c-7521cb363ebd",
                             TwoFactorEnabled = false,
                             UserName = "admin@admin.com"
                         },
@@ -168,15 +170,15 @@ namespace SuperCarteInfiniMVC.Data.Migrations
                         {
                             Id = "11111111-1111-1111-1111-111111111112",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "da8858a6-5340-4fe3-b5c6-7792f13fce05",
+                            ConcurrencyStamp = "0a8faaa6-89a7-430a-9d63-4ec7a6fd8d0d",
                             Email = "player@player.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "PLAYER@PLAYER.COM",
                             NormalizedUserName = "PLAYER@PLAYER.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKPTSqShmHbL6sYLhvJD/w9o5ApdqRw5aJfOdYjaCbTQ2w4vDyHf7e7vfAKqRbsA7g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAHF5m6Yfy15bp4yDIfLHNXHwyUQxbXBf4VQ4eSh2KRSvmxpHm5foGQD+elzaERrOg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4bca0e1e-ad9d-43b6-bb3d-d32da483d02b",
+                            SecurityStamp = "9477ac5e-e3fd-4c21-bc7d-e4b6a4578433",
                             TwoFactorEnabled = false,
                             UserName = "player@player.com"
                         });

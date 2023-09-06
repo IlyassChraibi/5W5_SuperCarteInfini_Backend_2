@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Identity;
 
 namespace SuperCarteInfiniMVC.Models
@@ -18,7 +19,7 @@ namespace SuperCarteInfiniMVC.Models
 		public virtual IdentityUser? IdentityUser { get; set; }
 		// TODO: Ajouter les cartes du joueur
 
-		public List<Card> Cards { get; set; }
+		public List<OwnedCard> OwnedCards { get; set; }
 	}
 }
 
