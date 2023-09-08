@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Utilisateur\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\2157338\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\2157338\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\2157338\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj",
+        "projectName": "SuperCarteInfiniMVC",
+        "projectPath": "C:\\Users\\2157338\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj",
+        "packagesPath": "C:\\Users\\2157338\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\2157338\\Desktop\\5W5_SuperCarteInfini_Backend_2\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\2157338\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Admin_Seed
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +39,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+<<<<<<< HEAD
+=======
+          "C:\\Program Files\\dotnet\\sdk\\7.0.307\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+>>>>>>> Admin_Seed
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -82,6 +103,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.21, 6.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.21, 6.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.21, 6.0.21]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.21, 6.0.21]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -90,7 +129,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.307\\RuntimeIdentifierGraph.json"
+>>>>>>> Admin_Seed
         }
       }
     }

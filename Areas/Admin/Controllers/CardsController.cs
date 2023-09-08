@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +13,7 @@ using SuperCarteInfiniMVC.Models;
 namespace SuperCarteInfiniMVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class CardsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -23,20 +26,20 @@ namespace SuperCarteInfiniMVC.Areas.Admin.Controllers
         // GET: Admin/Cards
         public async Task<IActionResult> Index()
         {
-              return _context.Card != null ? 
-                          View(await _context.Card.ToListAsync()) :
+              return _context.Cards != null ? 
+                          View(await _context.Cards.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Card'  is null.");
         }
 
         // GET: Admin/Cards/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Card == null)
+            if (id == null || _context.Cards == null)
             {
                 return NotFound();
             }
 
-            var card = await _context.Card
+            var card = await _context.Cards
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (card == null)
             {
@@ -71,12 +74,12 @@ namespace SuperCarteInfiniMVC.Areas.Admin.Controllers
         // GET: Admin/Cards/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Card == null)
+            if (id == null || _context.Cards == null)
             {
                 return NotFound();
             }
 
-            var card = await _context.Card.FindAsync(id);
+            var card = await _context.Cards.FindAsync(id);
             if (card == null)
             {
                 return NotFound();
@@ -122,12 +125,12 @@ namespace SuperCarteInfiniMVC.Areas.Admin.Controllers
         // GET: Admin/Cards/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Card == null)
+            if (id == null || _context.Cards == null)
             {
                 return NotFound();
             }
 
-            var card = await _context.Card
+            var card = await _context.Cards
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (card == null)
             {
@@ -142,14 +145,14 @@ namespace SuperCarteInfiniMVC.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Card == null)
+            if (_context.Cards == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.Card'  is null.");
             }
-            var card = await _context.Card.FindAsync(id);
+            var card = await _context.Cards.FindAsync(id);
             if (card != null)
             {
-                _context.Card.Remove(card);
+                _context.Cards.Remove(card);
             }
             
             await _context.SaveChangesAsync();
@@ -158,7 +161,7 @@ namespace SuperCarteInfiniMVC.Areas.Admin.Controllers
 
         private bool CardExists(int id)
         {
-          return (_context.Card?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Cards?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
