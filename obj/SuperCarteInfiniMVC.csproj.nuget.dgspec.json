@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1925619\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj": {}
+    "C:\\Users\\Utilisateur\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1925619\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj": {
+    "C:\\Users\\Utilisateur\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1925619\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj",
+        "projectUniqueName": "C:\\Users\\Utilisateur\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj",
         "projectName": "SuperCarteInfiniMVC",
-        "projectPath": "C:\\Users\\1925619\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj",
-        "packagesPath": "C:\\Users\\1925619\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1925619\\Desktop\\5W5_SuperCarteInfini_Backend_2\\obj\\",
+        "projectPath": "C:\\Users\\Utilisateur\\Desktop\\5W5_SuperCarteInfini_Backend_2\\SuperCarteInfiniMVC.csproj",
+        "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Utilisateur\\Desktop\\5W5_SuperCarteInfini_Backend_2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\1925619\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -91,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
