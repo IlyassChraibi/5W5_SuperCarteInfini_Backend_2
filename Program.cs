@@ -1,40 +1,23 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SuperCarteInfiniMVC.Data;
+using Microsoft.EntityFrameworkCore.Sqlite;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<ApplicationDbContext>(options => {
+    options.UseSqlite(connectionString);
+});
+
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
-
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAlmostAll", policy =>
-    {
-        // TODO pour utiliser AllowCredentials, il faut spécifier les origines acceptés
-        // on ne peut plus utiliser AllowAnyOrigin
-        policy.WithOrigins("http://localhost:4200", "https://localhost:4200");
-        //policy.AllowAnyOrigin();
-        policy.AllowAnyHeader();
-        policy.AllowAnyMethod();
-        // TODO permettre l'utilisation des Cookies
-        policy.AllowCredentials();
-
-    });
-});
-
-builder.Services.ConfigureApplicationCookie(options =>
-{
-    options.Cookie.HttpOnly = false;
-});
 
 var app = builder.Build();
 
