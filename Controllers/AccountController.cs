@@ -9,7 +9,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace Cours2.Controllers
+namespace SuperCarteInfiniMVC.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
@@ -29,7 +29,7 @@ namespace Cours2.Controllers
         [HttpPost]
         public async Task<ActionResult> Register(RegisterDTO register)
         {
-            if (register.Password != register.PasswordConfirm)
+            if (register.Password != register.ConfirmPassword)
             {
                 return StatusCode(StatusCodes.Status400BadRequest,
                     new { Message = "Les deux mots de passe spécifiés sont différents." });
@@ -48,7 +48,7 @@ namespace Cours2.Controllers
             return Ok(new { Message = "Inscription réussie ! 🥳" });
         }
 
-        [HttpPost]
+        [HttpPost("login")]
         public async Task<ActionResult> Login(LoginDTO login)
         {
             var result = await SignInManager.PasswordSignInAsync(login.UserName, login.Password, true, lockoutOnFailure: false);
