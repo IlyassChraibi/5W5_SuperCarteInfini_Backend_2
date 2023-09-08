@@ -121,13 +121,13 @@ namespace SuperCarteInfiniMVC.Data
 
             //ASK TEACHER SAYS "The seed entity for entity type 'OwnedCard'
             //cannot be added because no value was provided for the required property 'CardId'."
-            //OwnedCards = new List<OwnedCard>() {
-            //    new OwnedCard() { Id = 1 ,Card = card1, Player = playerTest },
-            //    new OwnedCard() { Id = 2, Card = card2, Player = playerTest },
-            //    new OwnedCard() { Id = 3 , Card = card3, Player = playerTest }
-            //};
+            OwnedCards = new List<OwnedCard>() {
+                new OwnedCard() { Id = 1 ,Card = card1, Player = playerTest },
+                new OwnedCard() { Id = 2, Card = card2, Player = playerTest },
+                new OwnedCard() { Id = 3 , Card = card3, Player = playerTest }
+            };
 
-            //builder.Entity<OwnedCard>().HasData(OwnedCards);
+            builder.Entity<OwnedCard>().HasData(OwnedCards);
 
 
         }
